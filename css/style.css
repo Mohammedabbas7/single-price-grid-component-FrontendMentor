@@ -1,0 +1,147 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap');
+
+/* ===Reset CSS=== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ===Base Style=== */
+
+body {
+    font-family: 'Karla', sans-serif;
+    font-size: 1rem;
+    line-height: 1.7;
+    background-color: hsl(204, 43%, 93%);
+    color: hsl(204, 43%, 93%);
+}
+
+ul {
+    list-style-type: none;
+}
+
+/* ===Main Style=== */
+
+.container{
+    display: grid;
+    place-content: center;
+    min-height: 100vh;
+}
+
+.component {
+    overflow: hidden;
+    max-width: 20em;
+    border-radius: .3em;
+    background-color: hsl(0, 0%, 100%);
+}
+
+.component > div {
+    padding: 1.5em;
+}
+
+.component__info h3 {
+    margin-bottom: .6em;
+    color: hsl(179, 62%, 43%);
+}
+
+.component__info h4 {
+    line-height: 1.4;
+    margin-bottom: .6em;
+    font-weight: 700;
+    color: hsl(71, 73%, 54%);
+}
+
+.component__info p {
+    color: hsl(218, 22%, 67%);
+}
+
+.component__price {
+    background-color: hsl(179, 62%, 43%);
+}
+
+.component__price p:nth-of-type(1) {
+    display: flex;
+    align-items: center;
+    margin-bottom: -8px;
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.subscripe {
+    margin-left: .5em;
+    font-size: 1rem;
+    font-weight: 500;
+    opacity: .6;
+}
+
+.btn {
+    border: none;
+    outline: none;
+    color: hsl(0, 0%, 100%);
+    background-color: hsl(71, 73%, 54%);
+    box-shadow: 1px 5px 20px rgba(0, 0, 0, .3);
+    margin-top: 1.5em;
+    padding: .8em 0;
+    border-radius: .3em;
+    font-size: 1rem;
+    font-weight: 700;
+    min-width: 100%;
+    transition: background-color 400ms;
+}
+
+.btn:hover {
+    cursor: pointer;
+    background-color: hsl(71, 65%, 54%); 
+}
+
+.component__services {
+    background-color: hsl(179, 47%, 52%);
+}
+
+.component__services h3 {
+    margin-bottom: .6em;
+}
+
+.component__services ul {
+    font-size: .8em;
+    opacity: .8;
+}
+
+/* ===Footer Style=== */
+
+.attribution { 
+    color: hsl(0, 0%, 0%);
+    font-size: .8rem; 
+    text-align: center; 
+}
+
+.attribution a { 
+    color: hsl(179, 62%, 43%); 
+}
+
+.attribution a:hover {
+    text-decoration: none;
+}
+
+/* ===Media Queries */
+
+@media(min-width: 45em) {
+
+    .component {
+        max-width: 40em;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .component > div {
+        padding: 2.3em;
+    }
+
+    .component__info {
+        grid-column: 1 / -1;
+    }
+
+    
+}
